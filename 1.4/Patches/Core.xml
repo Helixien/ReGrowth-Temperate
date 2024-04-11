@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/BiomeDef[defName = "TemperateForest"]/terrainsByFertility</xpath>
+				<value>
+					<terrainsByFertility>
+						<li>
+							<terrain>RG_TemperateSoil</terrain>
+							<min>-999</min>
+							<max>0.87</max>
+						</li>
+						<li>
+							<terrain>SoilRich</terrain>
+							<min>0.87</min>
+							<max>999</max>
+						</li>
+					</terrainsByFertility>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/BiomeDef[defName="TemperateForest"]/wildPlants</xpath>
+				<value>
+					<RG_Plant_TemperateIvy>3</RG_Plant_TemperateIvy>
+					<RG_Plant_TemperateFern>0.6</RG_Plant_TemperateFern>
+					<RG_Plant_BlueDandelion>0.5</RG_Plant_BlueDandelion>
+					<RG_Plant_RedDandelion>0.5</RG_Plant_RedDandelion>
+					<RG_Plant_TreeCornish>0.6</RG_Plant_TreeCornish>
+					<RG_Cibarius>0.05</RG_Cibarius>
+					<RG_Plant_Cibarius>0.000000000000001</RG_Plant_Cibarius>
+					<!--=============== Why the 0s? Because I cant lock them to a biome unless the value is greater than 0 because fuck me I gues... ==============-->
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/BiomeDef[defName="RG_TemperateGrassland"]/wildPlants</xpath>
+				<value>
+					<RG_Plant_GrasslandTallGrass>4</RG_Plant_GrasslandTallGrass>
+					<RG_Plant_TemperateIvy>1</RG_Plant_TemperateIvy>
+					<RG_Plant_BlueDandelion>0.5</RG_Plant_BlueDandelion>
+					<RG_Plant_RedDandelion>0.5</RG_Plant_RedDandelion>
+					<RG_Plant_Cathedralis>0.4</RG_Plant_Cathedralis>
+					<RG_Plant_TreeCornish>0.25</RG_Plant_TreeCornish>
+					<RG_Waxcap>0.08</RG_Waxcap>
+					<RG_Plant_Waxcap>0.000000000000001</RG_Plant_Waxcap>
+					<!--=============== Why the 0s? Because I cant lock them to a biome unless the value is greater than 0 because fuck me I gues... ==============-->
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>
